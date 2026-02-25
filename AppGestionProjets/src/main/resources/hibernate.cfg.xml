@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- soit mysql8, soit mariadb !-->
+        <!-- Chargement des propriétés depuis application.properties -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MariaDBDialect</property>
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/gestion_projets?zeroDateTimeBehavior=convertToNull</property>
+        <property name="hibernate.connection.username">root</property>
+        <!-- Affichage SQL -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+        <!-- Mise à jour automatique du schéma -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <!-- Déclaration des entités (classes persistantes) -->
+        <mapping class="ma.projet.classes.Tache"/>
+        <mapping class="ma.projet.classes.Employe"/>
+        <mapping class="ma.projet.classes.EmployeTache"/>
+        <mapping class="ma.projet.classes.Projet"/>
+    </session-factory>
+</hibernate-configuration>
