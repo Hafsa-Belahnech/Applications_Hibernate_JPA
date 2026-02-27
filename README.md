@@ -179,7 +179,7 @@
    <img width="923" height="353" alt="image" src="https://github.com/user-attachments/assets/20e48897-f535-425d-9b72-6d69da5c5b41" />
 
 > Table mariage :
-  <img width="1281" height="598" alt="image" src="https://github.com/user-attachments/assets/01f120df-7a19-4bbc-ac1b-c4f4ec5b176e" />
+   <img width="911" height="364" alt="image" src="https://github.com/user-attachments/assets/ece44a3f-f9c3-4435-8dcd-17d272583ced" />
 
 > Table homme :
   <img width="973" height="548" alt="image" src="https://github.com/user-attachments/assets/37fdd964-59bd-4609-b8d9-07f487894575" />
