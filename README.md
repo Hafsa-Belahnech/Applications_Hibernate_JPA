@@ -184,7 +184,10 @@
 > Table homme :
   <img width="973" height="548" alt="image" src="https://github.com/user-attachments/assets/37fdd964-59bd-4609-b8d9-07f487894575" />
 
-<img width="1111" height="445" alt="image" src="https://github.com/user-attachments/assets/48d572af-6031-4dcb-884b-1efe857dacdf" />
+  <img width="1111" height="445" alt="image" src="https://github.com/user-attachments/assets/48d572af-6031-4dcb-884b-1efe857dacdf" />
+
+  <img width="1075" height="667" alt="image" src="https://github.com/user-attachments/assets/ef9d6d86-8b4f-4094-a3a6-978804900e49" />
+
 
 
 
