@@ -5,7 +5,7 @@ import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
-@Embeddable
+@Embeddable //gerer le clé composite
 public class MariageId implements Serializable {
 
     @Column(name = "idHomme")
@@ -18,7 +18,7 @@ public class MariageId implements Serializable {
     public MariageId() {
     }
 
-    // Constructeur avec paramètres - CORRIGÉ ⚠️
+    // Constructeur avec paramètres 
     public MariageId(int idHomme, int idFemme) {
         this.idHomme = idHomme;
         this.idFemme = idFemme;
@@ -41,7 +41,7 @@ public class MariageId implements Serializable {
         this.idFemme = idFemme;
     }
 
-    // hashCode() & equals() - Obligatoires pour une clé composite
+    // hashCode() & equals()
     @Override
     public int hashCode() {
         return Objects.hash(idHomme, idFemme);
@@ -54,4 +54,5 @@ public class MariageId implements Serializable {
         MariageId that = (MariageId) obj;
         return idHomme == that.idHomme && idFemme == that.idFemme;
     }
+
 }
