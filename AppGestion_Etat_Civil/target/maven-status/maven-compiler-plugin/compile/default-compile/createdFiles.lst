@@ -1,0 +1,9 @@
+ma\projet\beans\Personne.class
+ma\projet\util\HibernateUtil.class
+ma\projet\beans\Mariage.class
+ma\projet\service\MariageService.class
+ma\projet\dao\IDao.class
+ma\projet\service\HommeService.class
+ma\projet\beans\Femme.class
+ma\projet\beans\Homme.class
+ma\projet\service\FemmeService.class
