@@ -9,7 +9,7 @@ public class EmployeTache {
 
     @EmbeddedId
     private int id;
-    private EmployeTacheId pk;
+    private EmployeTachePK pk;
 
     //Relation entre Employe et EmployeTache
     @ManyToOne
@@ -36,16 +36,16 @@ public class EmployeTache {
         this.tache = tache;
         this.dateDebutReelle = dateDebutReelle;
         this.dateFinReelle = dateFinReelle;
-        pk = new EmployeTacheId(employe.getId(), tache.getId());
+        pk = new EmployeTachePK(employe.getId(), tache.getId());
     }
 
     // Getters et Setters
 
-    public EmployeTacheId getpk() {
+    public EmployeTachePK getpk() {
         return pk;
     }
 
-    public void setpk(EmployeTacheId pk) {
+    public void setpk(EmployeTachePK pk) {
         this.pk = pk;
     }
 
