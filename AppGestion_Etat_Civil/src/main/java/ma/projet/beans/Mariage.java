@@ -8,9 +8,8 @@ import java.util.Date;
 @Entity
 public class Mariage implements Serializable {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.TABLE)
-    private int id;
+    @EmbeddedId
+    private MariageId id;
 
     @Temporal(TemporalType.DATE)
     private Date dateDebut;
@@ -37,14 +36,15 @@ public class Mariage implements Serializable {
         this.nbrEnfant = nbrEnfant;
         this.homme = homme;
         this.femme = femme;
+        id = new MariageId(homme.getId(), femme.getId());
     }
 
     // Getters & Setters
-    public int getId() {
+    public MariageId getid() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setid(MariageId id) {
         this.id = id;
     }
 
@@ -94,3 +94,4 @@ public class Mariage implements Serializable {
                 " le " + dateDebut + " avec " + nbrEnfant + " enfant(s)";
     }
 }
+
