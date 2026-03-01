@@ -1,8 +1,10 @@
 package ma.projet.classes;
 
 import java.io.Serializable;
-import java.util.Objects;
+import javax.persistence.Embeddable;
 
+
+@Embeddable
 //Classe pour la clé primaire composite de EmployeTache
 public class EmployeTachePK implements Serializable {
 
