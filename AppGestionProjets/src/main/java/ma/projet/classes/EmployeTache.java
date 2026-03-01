@@ -7,9 +7,9 @@ import javax.persistence.*;
 @Table(name = "EmployeTache")
 public class EmployeTache {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @EmbeddedId
     private int id;
+    private EmployeTacheId pk;
 
     //Relation entre Employe et EmployeTache
     @ManyToOne
@@ -36,16 +36,17 @@ public class EmployeTache {
         this.tache = tache;
         this.dateDebutReelle = dateDebutReelle;
         this.dateFinReelle = dateFinReelle;
+        pk = new EmployeTacheId(employe.getId(), tache.getId());
     }
 
     // Getters et Setters
 
-    public int getId() {
-        return id;
+    public EmployeTacheId getpk() {
+        return pk;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setpk(EmployeTacheId pk) {
+        this.pk = pk;
     }
 
     public Employe getEmploye() {
@@ -83,7 +84,7 @@ public class EmployeTache {
     @Override
     public String toString() {
         return "EmployeTache{" +
-                "id=" + id +
+                "pk=" + pk +
                 ", employe=" + employe +
                 ", tache=" + tache +
                 ", dateDebutReelle=" + dateDebutReelle +
