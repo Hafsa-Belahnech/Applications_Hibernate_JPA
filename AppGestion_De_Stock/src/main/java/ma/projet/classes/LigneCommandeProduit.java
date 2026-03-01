@@ -6,9 +6,8 @@ import javax.persistence.*;
 @Table(name = "LigneCommandeProduit")
 public class LigneCommandeProduit {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    @EmbeddedId
+    private CommandeProduitPK pK;
 
     @Column(name = "quantite")
     private int quantite;
@@ -26,17 +25,20 @@ public class LigneCommandeProduit {
     // Constructeurs!
     public LigneCommandeProduit() {}
 
-    public LigneCommandeProduit(int quantite) {
+    public LigneCommandeProduit(int quantite, Produit produit, Commande commande) {
         this.quantite = quantite;
+        this.produit = produit;
+        this.commande = commande;
+        pK = new CommandeProduitPK(commande.getId(), produit.getId());
     }
 
     // Getters et Setters
-    public int getId() {
-        return id;
+    public CommandeProduitPK getpK() {
+        return pK;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setpK(CommandeProduitPK pK) {
+        this.pK = pK;
     }
 
     public int getQuantite() {
